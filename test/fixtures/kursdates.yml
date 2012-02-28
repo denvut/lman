@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  kurs_id: 1
+  datestart: 2012-02-29
+  datestop: 2012-02-29
+  description: MyString
+
+two:
+  kurs_id: 1
+  datestart: 2012-02-29
+  datestop: 2012-02-29
+  description: MyString

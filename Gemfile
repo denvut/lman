@@ -1,6 +1,11 @@
-source 'http://rubygems.org'
+	source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
+
+
+gem 'netzke-core', :git => "git://github.com/skozlov/netzke-core.git"
+gem 'netzke-basepack', :git => "git://github.com/skozlov/netzke-basepack.git"
+
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

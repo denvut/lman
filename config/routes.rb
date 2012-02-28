@@ -1,4 +1,8 @@
 Lman::Application.routes.draw do
+ # get "welcome/index"
+
+    netzke
+    root :to => 'welcome#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
