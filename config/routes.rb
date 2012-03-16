@@ -1,4 +1,10 @@
 Lman::Application.routes.draw do
+  resources :mods
+
+  resources :kategories
+
+  resources :courses
+
  # get "welcome/index"
 
     netzke

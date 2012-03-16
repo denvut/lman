@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name_c: MyString
+  kategory_id: 1
+
+two:
+  name_c: MyString
+  kategory_id: 1

@@ -3,11 +3,12 @@
 
  <h2 align="center">Добавление Программ:</h2>
 
- <%= netzke :progs,
+ <%= netzke :kategories,
    :class_name => "Netzke::Basepack::GridPanel",
-   :model => "Prog",
+   :model => "Kategory",
    :columns => [:id,
-                :name_p
+                :name_k,
+
 
 
 
@@ -22,15 +23,15 @@
  %>
  <br>
 
-<h2 align="center">Добавление Модулей</h2>
+<h2 align="center">Добавление Курсов</h2>
 
-<%= netzke :moduls,
+<%= netzke :courses,
   :class_name => "Netzke::Basepack::GridPanel",
-  :model => "Modul",
-  :columns => [:id, :name_m,
+  :model => "Course",
+  :columns => [:id, :name_c,
 
 
-              :prog__name_p
+              :kategory__name_k
   ],
   # Standard Ext.grid.EditorGridPanel configuration options:
   :border => true,
@@ -43,14 +44,16 @@
 
  <br>
 
- <h2 align="center">Добавление Курсов</h2>
+ <h2 align="center">Добавление Модуей</h2>
 
- <%= netzke :kurs,
+ <%= netzke :mods,
    :class_name => "Netzke::Basepack::GridPanel",
-   :model => "Kurs",
-   :columns => [:id, :name_k,
+   :model => "Mod",
+   :columns => [:id, :name_m,
 
-               :modul__name_m
+           :course__name_c,
+           :kategory__name_k
+
    ],
    # Standard Ext.grid.EditorGridPanel configuration options:
    :border => true,
@@ -63,21 +66,4 @@
 
  <br>
 
- <h2 align="center">Добавление дат проведения Курсов</h2>
 
- <%= netzke :kursdate,
-   :class_name => "Netzke::Basepack::GridPanel",
-   :model => "Kursdate",
-   :columns => [:id,
-                :kurs__name_k,
-                :datestart,
-                :datestop,
-                :description
-   ],
-   # Standard Ext.grid.EditorGridPanel configuration options:
-   :border => true,
-   :header => false,
-   :view_config => {
-     :force_fit => true # force the columns to occupy all the available width
-   }
- %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  prog_id: 1
+  kurs_id: 1
+
+two:
+  prog_id: 1
+  kurs_id: 1

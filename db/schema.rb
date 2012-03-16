@@ -11,13 +11,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228164642) do
+ActiveRecord::Schema.define(:version => 20120313022552) do
+
+  create_table "courses", :force => true do |t|
+    t.string   "name_c"
+    t.integer  "kategory_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "kategories", :force => true do |t|
+    t.string   "name_k"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "kurs", :force => true do |t|
     t.string   "name_k"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "modul_id"
+    t.integer  "prog_id"
   end
 
   create_table "kurs_dates", :force => true do |t|
@@ -38,6 +52,14 @@ ActiveRecord::Schema.define(:version => 20120228164642) do
     t.datetime "updated_at"
   end
 
+  create_table "mods", :force => true do |t|
+    t.string   "name_m"
+    t.integer  "course_id"
+    t.integer  "kategory_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "moduls", :force => true do |t|
     t.string   "name_m"
     t.datetime "created_at"
@@ -49,6 +71,13 @@ ActiveRecord::Schema.define(:version => 20120228164642) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name_p"
+  end
+
+  create_table "progs_kurs", :force => true do |t|
+    t.integer  "prog_id"
+    t.integer  "kurs_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "tasks", :force => true do |t|

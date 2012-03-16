@@ -1,0 +1,23 @@
+<h1>Listing kategories</h1>
+
+<table>
+  <tr>
+    <th>Name k</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @kategories.each do |kategory| %>
+  <tr>
+    <td><%= kategory.name_k %></td>
+    <td><%= link_to 'Show', kategory %></td>
+    <td><%= link_to 'Edit', edit_kategory_path(kategory) %></td>
+    <td><%= link_to 'Destroy', kategory, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Kategory', new_kategory_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name m:</b>
+  <%= @mod.name_m %>
+</p>
+
+<p>
+  <b>Course:</b>
+  <%= @mod.course_id %>
+</p>
+
+<p>
+  <b>Kategory:</b>
+  <%= @mod.kategory_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_mod_path(@mod) %> |
+<%= link_to 'Back', mods_path %>
